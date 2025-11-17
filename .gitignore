@@ -1,7 +1,27 @@
+# Entornos virtuales
+.venv/
 venv/
 venv39/
 venv311/
+
+# Archivos de Python compilados
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+
+# Modelos y datos
+*.h5
+*.pt
+models/
+data/
+
+# Archivos temporales de Jupyter
+.ipynb_checkpoints/
+
+# Configuración del editor
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
