@@ -10,6 +10,7 @@ import numpy as np
 import time
 import sys
 import os
+
 # ✅ FIX: Agregar ruta para imports
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
@@ -84,7 +85,8 @@ def predict(array):
         
         # 4. GENERACIÓN GRAD-CAM
         print("🔥 Paso 3/3: Generando mapa de calor...")
-        heatmap = grad_cam(array)
+        # CORREGIDO: Pasar el modelo como primer parámetro
+        heatmap = grad_cam(model, array)
         
         tiempo_ejecucion = time.time() - start_time
         print(f"✅ Pipeline completado en {tiempo_ejecucion:.2f} segundos")
@@ -94,6 +96,8 @@ def predict(array):
         
     except Exception as e:
         print(f"❌ Error crítico en el pipeline: {e}")
+        import traceback
+        traceback.print_exc()
         return "error", 0.0, generar_imagen_error()
 
 def validar_entrada(imagen_array):
@@ -156,6 +160,7 @@ def generar_imagen_error():
         numpy.ndarray: Imagen de error en RGB
     """
     try:
+        import cv2
         # Crear imagen negra con texto de error
         imagen_error = np.zeros((512, 512, 3), dtype=np.uint8)
         
@@ -179,4 +184,3 @@ def obtener_confianza(probabilidad):
         return "Media"
     else:
         return "Baja"
-    
