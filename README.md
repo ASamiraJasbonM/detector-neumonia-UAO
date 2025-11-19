@@ -17,13 +17,20 @@ Sistema de inteligencia artificial para el apoyo al diagnóstico de neumonía en
 - TensorFlow 2.11+
 - OpenCV 4.7+
 
-### Instalación rápida
+### Paso 1: Instalación rápida
 ```bash
 git clone https://github.com/tu-usuario/detector-neumonia.git
 cd detector-neumonia
 pip install -r requirements.txt
 ```
-### Método 1: Construir y ejecutar la imagen en docker
+
+### Paso 2: Desccargar y mover modelo de clasificación 
+En caso de no poder descarcar modelo, no se podrá realizar predicciones.
+- conv_MLP_84.h5
+- Mover archivo conv_MLP_84.h5 a C:\Users\[usuario]\detector-neumonia-UAO\models\
+
+
+### Paso 3: Construir y ejecutar la imagen en docker
 - **Clasificación Automática**: Detecta neumonía bacteriana, viral y casos normales
 ```bash
 docker build -t detector-neumonia .
