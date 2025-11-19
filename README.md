@@ -31,7 +31,6 @@ En caso de no poder descarcar modelo, no se podrá realizar predicciones.
 
 
 ### Paso 3: Construir y ejecutar la imagen en docker
-- **Clasificación Automática**: Detecta neumonía bacteriana, viral y casos normales
 ```bash
 docker build -t detector-neumonia .
 docker run -p 5000:5000 detector-neumonia
