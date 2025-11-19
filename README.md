@@ -22,3 +22,24 @@ Sistema de inteligencia artificial para el apoyo al diagnóstico de neumonía en
 git clone https://github.com/tu-usuario/detector-neumonia.git
 cd detector-neumonia
 pip install -r requirements.txt
+```
+### Método 1: Construir y ejecutar la imagen en docker
+- **Clasificación Automática**: Detecta neumonía bacteriana, viral y casos normales
+```bash
+docker build -t detector-neumonia .
+docker run -p 5000:5000 detector-neumonia
+```
+
+### Ejecución: 
+```bash
+python main.py
+
+```
+
+### Prueba de funcionamiento:
+- Es necesario probar el funcionamiento de los componentes para asegurar que ha sido exitosa la instalación, aunmque este paso se puede saltar si se ejecuta correctamente.
+```bash
+python test_integrator.py
+python test_quick.py
+python test_simple.py
+```
