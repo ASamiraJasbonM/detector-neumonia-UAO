@@ -10,6 +10,7 @@ Sistema de inteligencia artificial para el apoyo al diagnóstico de neumonía en
 - **Reportes en PDF**: Generación automática de reportes médicos
 - **Sistema Modular**: Arquitectura limpia y mantenible
 
+
 ## 🚀 Instalación
 
 ### Requisitos
@@ -19,7 +20,7 @@ Sistema de inteligencia artificial para el apoyo al diagnóstico de neumonía en
 
 ### Paso 1: Instalación rápida
 ```bash
-git clone [https://github.com/ASamiraJasbonM/detector-neumonia-UAO.git]
+git clone https://github.com/ASamiraJasbonM/detector-neumonia-UAO.git
 cd detector-neumonia
 pip install -r requirements.txt
 ```
